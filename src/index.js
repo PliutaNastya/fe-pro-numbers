@@ -7,7 +7,15 @@
  * @param {number} maxSecond
  * @returns {number}
  */
-export const minMaxMultiply = (minFirst, minSecond, maxFirst, maxSecond) => {};
+export const minMaxMultiply = (minFirst, minSecond, maxFirst, maxSecond) => {
+
+    const minNumber = Math.min(minFirst, minSecond);
+    const maxNumber = Math.max(maxFirst, maxSecond);
+
+    const minMaxMultiplyResult = minNumber * maxNumber;
+
+    console.log (minMaxMultiplyResult);
+};
 
 /**
  * Функция принимает один числовой аргумент, это радиус круга. Функция должна
@@ -16,7 +24,12 @@ export const minMaxMultiply = (minFirst, minSecond, maxFirst, maxSecond) => {};
  * @param {number} radius
  * @returns {number}
  */
-export const getSquareOfCircle = (radius) => {};
+export const getSquareOfCircle = (radius) => {
+
+    const square = Math.PI * Math.pow(radius, 2);
+
+    console.log (square);
+};
 
 /**
  * Функция принимает число и точность к которой нужно округлить
@@ -26,7 +39,10 @@ export const getSquareOfCircle = (radius) => {};
  * @param {number} accuracy
  * @returns {number}
  */
-export const getFixedValue = (number, accuracy) => {};
+export const getFixedValue = (number, accuracy) => {
+    
+    console.log(Math.round(number * Math.pow(10, accuracy)) / Math.pow(10, accuracy));
+};
 
 /**
  * Если целая часть числа четная, то срабатывает Math.floor для этого числа
@@ -34,7 +50,13 @@ export const getFixedValue = (number, accuracy) => {};
  * @param {number} number
  * @returns {number}
  */
-export const getFlooroCeil = (number) => {};
+export const getFlooroCeil = (number) => {
+    if (Math.round(number) % 2 === 0) {
+        console.log(Math.floor(number));
+    } else {
+        console.log(Math.ceil(number));
+    }
+};
 
 /**
  * Мы передаем два числа, от какого и до какого числа и функция должна
@@ -44,4 +66,6 @@ export const getFlooroCeil = (number) => {};
  * @param {number} to
  * @returns {number}
  */
-export const randomizer = (from, to) => {};
+export const randomizer = (from, to) => {
+    console.log(Math.round(from + Math.random() * (to - from)));
+};
